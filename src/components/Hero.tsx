@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
+import qrCode from "@/assets/qr-code.png";
 
 const Hero = () => {
   return (
@@ -25,16 +26,38 @@ const Hero = () => {
             Legal support that listens first. Serving our community with compassion and clarity.
           </p>
 
+          {/* QR Codes Section */}
+          <div className="flex flex-col md:flex-row gap-8 justify-center items-center mb-8">
+            <div className="text-center">
+              <p className="text-white mb-4 text-lg font-medium">Scan here to schedule an appointment.</p>
+              <div className="bg-white p-4 rounded-lg shadow-lg">
+                <img src={qrCode} alt="Schedule Appointment QR Code" className="w-32 h-32 mx-auto" />
+              </div>
+            </div>
+            <div className="text-center">
+              <p className="text-white mb-4 text-lg font-medium">Scan here to instantly connect with a lawyer.</p>
+              <div className="bg-white p-4 rounded-lg shadow-lg">
+                <img src={qrCode} alt="Meet Now QR Code" className="w-32 h-32 mx-auto" />
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
-              className="bg-accent hover:bg-accent-light text-accent-foreground font-semibold text-lg px-8 py-4 h-auto"
+              className="bg-teal-500 hover:bg-teal-600 text-white font-bold text-lg px-8 py-4 h-auto uppercase tracking-wide"
+              onClick={() => window.open('https://stagelawyer.panvatech.com/RequestAppointment?PA=MQ==', '_blank')}
             >
-              Schedule Your Free Consultation
-              <ArrowRight className="w-5 h-5 ml-2" />
+              Make an Appointment
             </Button>
-            
-            
+            <Button 
+              size="lg" 
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg px-8 py-4 h-auto uppercase tracking-wide"
+              onClick={() => window.open('https://stagelawyer.panvatech.com/MeetRequestAppointment?PA=MQ==', '_blank')}
+            >
+              Meet Now
+            </Button>
           </div>
 
           {/* Trust Indicators */}
