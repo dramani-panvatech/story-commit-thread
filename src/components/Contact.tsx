@@ -264,12 +264,17 @@ const Contact = () => {
               <h3 className="text-xl font-semibold text-primary mb-4">
                 Our Location
               </h3>
-              <div className="h-64 bg-muted rounded-lg flex items-center justify-center">
-                <div className="text-center text-muted-foreground">
-                  <MapPin className="w-12 h-12 mx-auto mb-2" />
-                  <p>Interactive Map</p>
-                  <p className="text-sm">Downtown Legal District</p>
-                </div>
+              <div className="h-64 w-full rounded-lg overflow-hidden flex items-center justify-center">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6696.808951040994!2d-117.020342!3d32.940329!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dbfb0dfb0bc705%3A0x36702894f19912e1!2s14269%20Danielson%20St%20%23400%2C%20Poway%2C%20CA%2092064%2C%20USA!5e0!3m2!1sen!2sin!4v1753358872621!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Google Map Location"
+                ></iframe>
               </div>
               <div className="mt-4 text-sm text-muted-foreground">
                 <p>Convenient parking available</p>

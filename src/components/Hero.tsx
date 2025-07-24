@@ -39,19 +39,15 @@ const Hero = () => {
 
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="bg-teal-500 hover:bg-teal-600 text-white font-bold text-lg px-8 py-4 h-auto uppercase tracking-wide"
-              onClick={() => window.open('https://stagelawyer.panvatech.com/RequestAppointment?PA=MQ==', '_blank')}
+            <Button
+              asChild
+              size="lg"
+              className="bg-accent hover:bg-accent-light text-accent-foreground font-semibold text-lg px-8 py-4 h-auto"
             >
-              Make an Appointment
-            </Button>
-            <Button 
-              size="lg" 
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg px-8 py-4 h-auto uppercase tracking-wide"
-              onClick={() => window.open('https://stagelawyer.panvatech.com/MeetRequestAppointment?PA=MQ==', '_blank')}
-            >
-              Meet Now
+              <a href="https://stagelawyer.panvatech.com/RequestAppointment?PA=MQ==" target="_blank" rel="noopener noreferrer">
+                Schedule Your Free Consultation
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </a>
             </Button>
           </div>
 
