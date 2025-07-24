@@ -26,19 +26,14 @@ const Hero = () => {
             Legal support that listens first. Serving our community with compassion and clarity.
           </p>
 
-          {/* QR Codes Section */}
-          <div className="flex flex-col md:flex-row gap-8 justify-center items-center mb-8">
-            <div className="text-center">
-              <p className="text-white mb-4 text-lg font-medium">Scan here to schedule an appointment.</p>
-              <div className="bg-white p-4 rounded-lg shadow-lg">
-                <img src={qrCode} alt="Schedule Appointment QR Code" className="w-32 h-32 mx-auto" />
-              </div>
+          {/* QR Code Section */}
+          <div className="text-center mb-8">
+            <div className="mb-4">
+              <p className="text-white text-lg font-medium mb-2">Scan here to schedule an appointment.</p>
+              <p className="text-white text-lg font-medium">Scan here to instantly connect with a lawyer.</p>
             </div>
-            <div className="text-center">
-              <p className="text-white mb-4 text-lg font-medium">Scan here to instantly connect with a lawyer.</p>
-              <div className="bg-white p-4 rounded-lg shadow-lg">
-                <img src={qrCode} alt="Meet Now QR Code" className="w-32 h-32 mx-auto" />
-              </div>
+            <div className="bg-white p-4 rounded-lg shadow-lg inline-block">
+              <img src={qrCode} alt="QR Code for Legal Services" className="w-40 h-40 mx-auto" />
             </div>
           </div>
 
